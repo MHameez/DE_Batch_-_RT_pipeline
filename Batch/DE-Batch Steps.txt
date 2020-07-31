@@ -1,0 +1,27 @@
+Run Kafka
+
+-Start Zookeaper  >> zookeeper-server-start.bat ../../config/zookeeper.properties
+-Start Kafka Server >> kafka-server-start.bat ../../config/server.properties
+-Create Topi >> kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --
+partitions 1 --topic word
+-Start Producer >> kafka-console-producer.bat --broker-list localhost:9092 --topic test
+-Start Consumer >> kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test --
+from-beginning
+
+
+
+
+
+Start ElasticSearch
+
+-Go into ElasticSearch installation folder
+-Open CMD
+-run .\bin\elasticsearch.bat
+-open server in browser http://localhost:9200/
+
+Start Kibana 
+
+-Go into Kibana installation folder
+-Open CMD
+-run .\bin\kibana.bat
+-open server in browser http://localhost:5601
